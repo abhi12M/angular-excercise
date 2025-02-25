@@ -1,0 +1,27 @@
+mat-card {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.full-width {
+    width: 100%;
+}
+
+button {
+    width: 100%;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+}

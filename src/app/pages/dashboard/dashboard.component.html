@@ -1,0 +1,27 @@
+<div class="m10">
+  <div>
+    <h1 class="text-center">Dashboard</h1>
+    <div>
+      <span>Welcome, {{ userName }}</span>
+      <button mat-raised-button color="warn" class="ml10" (click)="logout()">
+        Logout
+      </button>
+    </div>
+  </div>
+  <form>
+    <mat-form-field>
+      <mat-label>Chart Type</mat-label>
+      <input type="text" placeholder="Select chart type" matInput [formControl]="chartType" [matAutocomplete]="auto">
+      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" (optionSelected)="chartTypeChanged()">
+        @for (option of filteredOptions | async; track option) {
+        <mat-option [value]="option">{{ option }}</mat-option>
+        }
+      </mat-autocomplete>
+    </mat-form-field>
+    <mat-form-field class="ml5">
+      <mat-label>Chart Color</mat-label>
+      <input matInput type="color" [formControl]="color" (ngModelChange)="colorChange()" />
+    </mat-form-field>
+  </form>
+  <app-graph [data]="chartData"></app-graph>
+</div>
