@@ -1,27 +1,63 @@
-# AngularExcercise
+# Angular Exercise
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
+## Overview
+Angular Exercise is a simple Angular application demonstrating authentication, route protection, state management using NgRx, and dynamic chart visualization. The project includes a login page with authentication and a dashboard with chart customization options.
 
-## Development server
+## Features
+- **Login Page**
+  - Contains two fields: `username` and `password` (both required).
+  - Credentials: 
+    - Username: `admin`
+    - Password: `123456`
+  - On successful login, redirects to the dashboard.
+  
+- **Route Protection**
+  - Unauthorized access to the dashboard is prevented using `CanActivate` guard.
+  
+- **Dashboard Page**
+  - Contains two options:
+    - **Chart Type:** Single-select dropdown (Options: Line, Bar, Column).
+    - **Color Picker:** Allows selecting a color to apply to the chart.
+  - Chart updates dynamically based on the selected options.
+  
+- **State Management**
+  - Uses NgRx Store to manage chart type and color selection.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Installation & Running the Application
+Clone the repository:
+```sh
+git clone https://github.com/abhi12M/angular-excercise.git
+```
 
-## Code scaffolding
+Navigate to the project directory:
+```sh
+cd angular-excercise
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Install dependencies:
+```sh
+npm install
+```
 
-## Build
+Run the application:
+```sh
+npm run start
+# OR
+ng serve
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Deployment
+The application is deployed using Firebase Hosting. To deploy, run:
+```sh
+npm run deploy
+```
 
-## Running unit tests
+## Dependencies & Technologies Used
+- **Angular 19** - Frontend framework
+- **NgRx Store** - State management
+- **Highcharts** - Charting library
+- **Angular Material** - UI components
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## License
+This project is open-source and available under the [MIT License](LICENSE).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
