@@ -10,7 +10,8 @@ Angular Exercise is a simple Angular application demonstrating authentication, r
     - Username: `admin`
     - Password: `123456`
   - On successful login, redirects to the dashboard.
-  
+  ![Login Page](screenshots/login-page.png)
+
 - **Route Protection**
   - Unauthorized access to the dashboard is prevented using `CanActivate` guard.
   
@@ -19,7 +20,8 @@ Angular Exercise is a simple Angular application demonstrating authentication, r
     - **Chart Type:** Single-select dropdown (Options: Line, Bar, Column).
     - **Color Picker:** Allows selecting a color to apply to the chart.
   - Chart updates dynamically based on the selected options.
-  
+![Dashboard](screenshots/dashboard.png)
+
 - **State Management**
   - Uses NgRx Store to manage chart type and color selection.
 
